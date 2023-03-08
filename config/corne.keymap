@@ -83,9 +83,9 @@
 //                      |     |     |       |          |     |      |      |
 			label = "Media";
 			bindings = <
-&ext_power EP_ON &trans &trans &trans &trans &trans			&trans &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &trans
-&trans &trans &trans &trans &trans &trans			&trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans			&trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans			&trans &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &trans
+&bl BL_TOG &bl BL_DEC &bl BL_INC &bl BL_CYCLE &trans &trans			&trans &trans &trans &trans &trans &trans
+&bl BL_SET 10 &bl BL_SET 25 &bl BL_SET 50 &bl BL_SET 75 &bl BL_SET 100 &trans			&trans &trans &trans &trans &trans &trans
 					&trans &trans &trans   		&trans &trans &trans
 			>;
 		};
