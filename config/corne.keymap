@@ -8,6 +8,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/led/led.h>
 
 #define DEFAULT 0
 #define LOWER   1
@@ -64,25 +66,25 @@
 //                     | GUI |     |  SPC  |          | ENT |     | ALT |
 			label = "Raise";
 			bindings = <
-&kp CAPS &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5	&kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &trans
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 4 &bt BT_SEL 5         	&trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-&trans &trans &trans &kp HOME &kp END &kp K_CMENU                       &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
+&kp CAPS &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5		&kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &trans
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 4 &bt BT_SEL 5			&trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
+&trans &trans &trans &kp HOME &kp END &kp K_CMENU			&kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
 					&kp LGUI &trans &kp SPACE			&kp RET &trans &kp RALT
 			>;
 		};
 
 		media_layer {
 // -----------------------------------------------------------------------------------------
-// |	 |      |      |     |     |       |          |     | mute | vol v| vol ^ |       |       |
-// |BTCLR| BT1  | BT2  | BT3 | BT4 | BT5   |          |     |   <- |   ^  |  v    |  ->   |       |
-// |     |      |      |HOME | END |SUBMENU|          |  +  |   -  |   =  |  [    |   ]   |   \   |
-//                     |     |     |       |          |     |      |      |
+// |      | |       |       |       |       |          |     | mute | vol v| vol ^ |       |       |
+// |BL_TOG| |RGB_TOG|RGB_EFF|RGB_HUI|RGB_SAI|          |     |      |      |       |       |       |
+// |      | |       |RGB_EFR|RGB_HUD|RGB_SAD|          |     |      |      |       |       |       |
+//                      |     |     |       |          |     |      |      |
 			label = "Media";
 			bindings = <
-&trans &trans &trans &trans &trans &trans	&trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans	&trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans	&trans &trans &trans &trans &trans &trans
-					&trans &trans &trans   	&trans &trans &trans
+&trans &trans &trans &trans &trans &trans			&trans &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &trans
+&bl BL_TOG &trans &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI			&trans &trans &trans &trans &trans &trans
+&trans &trans &trans &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD			&trans &trans &trans &trans &trans &trans
+					&trans &trans &trans   		&trans &trans &trans
 			>;
 		};
 	};
