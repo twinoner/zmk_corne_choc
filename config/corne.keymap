@@ -57,5 +57,28 @@
 					&kp LGUI &trans &kp SPACE			&kp RET &trans &kp RALT
 			>;
 		};
+
+		media_layer {
+// -----------------------------------------------------------------------------------------
+// |	 |      |      |     |     |       |          |     | mute | vol v| vol ^ |       |       |
+// |BTCLR| BT1  | BT2  | BT3 | BT4 | BT5   |          |     |   <- |   ^  |  v    |  ->   |       |
+// |     |      |      |HOME | END |SUBMENU|          |  +  |   -  |   =  |  [    |   ]   |   \   |
+//                     | GUI |     |  SPC  |          | ENT |     | ALT |
+			label = "Media";
+			bindings = <
+&trans &trans &trans &trans &trans &trans 		&trans &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &trans
+&trans &trans &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI 	&trans &kp C_PREV   &kp C_PP     &kp C_PP     &trans &trans
+&trans &trans &bl BL_TOG &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD       	&trans &kp C_BRI_UP &kp C_BRI_DN &trans       &trans &trans
+						&trans &kp LCMD &mt LALT SPACE   			&kp SPACE &mt RCMD ENTER &trans
+			>;
+		};
+	};
+
+	conditional_layers {
+		compatible = "zmk,conditional-layers";
+		tri_layer {
+			if-layers = <1 2>;
+			then-layer = <3>;
+		};
 	};
 };
