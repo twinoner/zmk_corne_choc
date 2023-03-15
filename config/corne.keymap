@@ -15,7 +15,7 @@
 #include <../boards/shields/corne/boards/nice_nano.overlay>
 
 // Overwrite number of leds on the keyboard. A Corne has 27 per side.
-// &led_strip { chain-length = <27>; };
+&led_strip { chain-length = <27>; };
 
 #define DEFAULT 0
 #define LOWER   1
@@ -82,7 +82,7 @@
 		media_layer {
 // -----------------------------------------------------------------------------------------
 // |BTCLR| BT1  | BT2  | BT3 | BT4 | BT5   |           |     |       | vol v| vol ^ |       |       |
-// |	  |PREV |PLAYPAU|NEXT |       |     |          |     |       |      |       |       |       |
+// |	  |PREV |PLAYPAU|NEXT |       |     |          |     |       |      |       |       |       |unoeathu
 // |      |     |       |     |       |		|          |     |       |      |       |       |       |
 //                      |mute |     | VOL V |          | VOL ^|      |      |
 			label = "Media";
@@ -93,5 +93,5 @@
 					&kp K_MUTE &trans &kp C_VOL_DN   		&kp C_VOL_UP &trans &trans
 			>;
 		};
-	};
+	};nswtathoenuhmanoehubvwmb;qjkxaoeui'.pylcrgf
 };
