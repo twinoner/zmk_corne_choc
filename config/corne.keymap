@@ -9,9 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/led/led.h>
-#include <dt-bindings/zmk/backlight.h>
+// #include <dt-bindings/zmk/rgb.h>
+// #include <dt-bindings/led/led.h>
+// #include <dt-bindings/zmk/backlight.h>
 
 #include <../boards/shields/corne/boards/nice_nano.overlay>
 
@@ -19,6 +19,7 @@
 #define LOWER   1
 #define RAISE   2
 #define ADJUST  3
+#define TRANS &trans
 
 / {
 	conditional_layers {
@@ -85,9 +86,9 @@
 //                      |mute |     | VOL V |          | VOL ^|      |      |
 			label = "Media";
 			bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4			&rgb_ug RGB_BRD    &rgb_ug RGB_BRI &trans &rgb_ug RGB_EFR    &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
-&out OUT_TOG &kp C_PREV &kp C_PP &kp C_NEXT &trans &trans			&rgb_ug RGB_SAD    &rgb_ug RGB_SAI &trans &bl BL_DEC &bl BL_INC &bl BL_CYCLE
-&ext_power EP_OFF &ext_power EP_ON &trans &trans &trans &trans			&rgb_ug RGB_HUD    &rgb_ug RGB_HUI &trans &bl BL_ON &bl BL_OFF &bl BL_TOG
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4			TRANS TRANS TRANS TRANS TRANS TRANS
+&out OUT_TOG &kp C_PREV &kp C_PP &kp C_NEXT &trans &trans			TRANS TRANS TRANS TRANS TRANS TRANS
+&ext_power EP_OFF &ext_power EP_ON &trans &trans &trans &trans			TRANS TRANS TRANS TRANS TRANS TRANS
 					&kp K_MUTE &trans &kp C_VOL_DN   		&kp C_VOL_UP &trans &trans
 			>;
 		};
